@@ -1,3 +1,5 @@
+import { changeEffect } from './slider.js';
+
 const imagePreview = document.querySelector('.img-upload__preview').children[0];
 const effects = document.querySelector('.img-upload__effects');
 
@@ -9,6 +11,7 @@ const setupEffects = () => {
     }
     imagePreview.classList = '';
     imagePreview.classList.add(`effects__preview--${evtTargetElement.value}`);
+    changeEffect(evtTargetElement.value);
   });
 };
 
